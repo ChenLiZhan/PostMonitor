@@ -1,0 +1,11 @@
+<% layout( 'layout' ) %>
+
+<h1><%= title %></h1>
+<p>The Dcard posts</p>
+<ul>
+  <% posts.forEach(function(post) { %>
+    <li>
+      <%= post["version"][0]['title'] %>
+    </li>
+  <% }); %> 
+</ul>
