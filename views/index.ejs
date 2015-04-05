@@ -1,8 +1,21 @@
-<% layout( 'layout' ) %>
-
-<h1><%= title %></h1>
-<p>Simply get the Posts from Dcard and Reddit</p>
-<a ui-sref="dcard">Dcard</a>
-<a ui-sref="reddit">Reddit</a>
-
-<div ui-view></div>
+<!DOCTYPE html>
+<html ng-app="postsApp">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1><%= title %></h1>
+      <p>Simply get the Posts from Dcard and Reddit</p>
+      <a ui-sref="dcard">Dcard</a>
+      <a ui-sref="reddit">Reddit</a>
+      
+      <div ui-view></div>
+    </div>
+  </body>
+</html>
