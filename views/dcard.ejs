@@ -1,16 +1,13 @@
 <% layout( 'layout' ) %>
 
-<h1><%= title %></h1>
-<p>The Dcard posts</p>
+<h2>The Dcard posts</h2>
 
 <div>
   <ul>
-    <% posts.forEach(function(post) { %>
-      <li>
-        <a href="https://www.dcard.tw/f/all/p/<%= post['id'] %>">
-          <%= post['version'][0]['title'] %>
-        </a>
-      </li>
-    <% }); %>
+    <li ng-repeat="post in posts">
+      <a ng-href="https://www.dcard.tw/f/all/p/{{ post.id }}">
+        {{ post.title }}
+      </a>
+    </li>
   </ul>
 </div>

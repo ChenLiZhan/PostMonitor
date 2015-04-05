@@ -5,6 +5,11 @@ exports.index = function(req, res, next) {
   res.render('index', {title: 'PostsMonitor'});
 }
 
+exports.partials = function(req, res, next) {
+  var name = req.params.name;
+  res.render(name, {title: name + ' Posts'});
+}
+
 exports.getDcardPosts = function(req, res, next) {
   https.get('https://www.dcard.tw/api/forum/all/1/', function(response) {
     var body = '';
@@ -13,18 +18,9 @@ exports.getDcardPosts = function(req, res, next) {
     });
 
     response.on('end', function() {
-      var dcardPosts = JSON.parse(body);
-      console.log(dcardPosts[0]['version'][0]['content']);
-      res.render('dcard', {
-        title: 'PostsMonitor',
-        posts: dcardPosts
-      });
+      res.json(body);
     });
   }).on('error', function(e) {
     console.log("Got error: ", e.message);
   });
-}
-
-exports.getRedditPosts = function(req, res, next) {
-  res.render('reddit', {title: 'PostsMonitor'});
 }
