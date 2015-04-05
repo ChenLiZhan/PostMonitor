@@ -6,7 +6,9 @@
 <div ng-controller="RedditPostsController">
   <ul>
     <li ng-repeat="post in posts">
-      {{ post['data']['title'] }}
+      <a ng-href="{{ post['data']['url'] }}">
+        {{ post['data']['title'] }}
+      </a>
     </li>
   </ul>
 </div>
