@@ -2,10 +2,15 @@
 
 <h1><%= title %></h1>
 <p>The Dcard posts</p>
-<ul>
-  <% posts.forEach(function(post) { %>
-    <li>
-      <%= post["version"][0]['title'] %>
-    </li>
-  <% }); %> 
-</ul>
+
+<div>
+  <ul>
+    <% posts.forEach(function(post) { %>
+      <li>
+        <a href="https://www.dcard.tw/f/all/p/<%= post['id'] %>">
+          <%= post['version'][0]['title'] %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</div>

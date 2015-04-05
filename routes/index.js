@@ -14,6 +14,7 @@ exports.getDcardPosts = function(req, res, next) {
 
     response.on('end', function() {
       var dcardPosts = JSON.parse(body);
+      console.log(dcardPosts[0]['version'][0]['content']);
       res.render('dcard', {
         title: 'PostsMonitor',
         posts: dcardPosts
@@ -22,4 +23,8 @@ exports.getDcardPosts = function(req, res, next) {
   }).on('error', function(e) {
     console.log("Got error: ", e.message);
   });
+}
+
+exports.getRedditPosts = function(req, res, next) {
+  res.render('reddit', {title: 'PostsMonitor'});
 }

@@ -1,0 +1,12 @@
+<% layout('layout') %>
+
+<h1><%= title %></h1>
+<p>The Reddit posts</p>
+
+<div ng-controller="RedditPostsController">
+  <ul>
+    <li ng-repeat="post in posts">
+      {{ post['data']['title'] }}
+    </li>
+  </ul>
+</div>

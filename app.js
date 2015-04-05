@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.get('/', routes.index);
 app.get('/dcard', routes.getDcardPosts);
-
+app.get('/reddit', routes.getRedditPosts);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
