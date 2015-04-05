@@ -21,6 +21,6 @@ exports.getDcardPosts = function(req, res, next) {
       res.json(body);
     });
   }).on('error', function(e) {
-    console.log("Got error: ", e.message);
+    console.log('Got error: ', e.message);
   });
 }

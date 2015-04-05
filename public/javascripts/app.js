@@ -3,15 +3,15 @@ angular.module('postsApp', [
   'PostsMonitorController'
 ])
   .config(function config($stateProvider) {
-    $stateProvider.state("dcard", {
-      url: "/dcard",
-      controller: "DcardPostsController",
-      templateUrl: "partials/dcard"
+    $stateProvider.state('dcard', {
+      url: '/dcard',
+      controller: 'DcardPostsController',
+      templateUrl: 'partials/dcard'
     })
 
-    $stateProvider.state("reddit", {
-      url: "/reddit",
-      controller: "RedditPostsController",
-      templateUrl: "partials/reddit"
+    $stateProvider.state('reddit', {
+      url: '/reddit',
+      controller: 'RedditPostsController',
+      templateUrl: 'partials/reddit'
     })
   })
