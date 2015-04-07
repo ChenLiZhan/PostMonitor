@@ -27,7 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials)
 
-app.get('/api/dcard', api.getDcardPosts);
+app.get('/api/dcard/posts/:category', api.getDcardPosts);
+app.get('/api/dcard/categories', api.getDcardCategories);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

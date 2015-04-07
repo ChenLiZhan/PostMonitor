@@ -1,5 +1,10 @@
 <h2>The Dcard posts</h2>
-
+<select ng-model="selected" ng-change="getPosts(selected)">
+  <option value="default" disabled>Please Choose Category</option>
+  <option ng-repeat="category in categories" value="{{ category.id }}">
+    {{ category.name }}
+  </option>
+</select>
 <div>
   <ul>
     <li ng-repeat="post in posts">
