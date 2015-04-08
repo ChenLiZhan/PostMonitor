@@ -6,4 +6,6 @@ This is a service to get the posts from [Dcard](https://www.dcard.tw/) and [Redd
   + Node.js
 
 # Routes
-  + ```GET '/'```: HOME page
+  + ```'/'```: HOME page
+  + ```'/#/dcard'```: Shows the latest posts within specific category
+  + ```'/#/reddit'```: Shows the latest posts
